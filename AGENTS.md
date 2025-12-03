@@ -22,49 +22,16 @@
 ---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `Express-Kickstart-NodeJS-Web-App-Template`, is a Node.js web application boilerplate.
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `RapidStart-Express-NodeJS-WebApp-Template`, is an Express.js-based web application template.
 
-*   **PRIMARY SCENARIO: WEB / APP / GUI (Modern Frontend / Backend)**
-    *   **Stack:** This project utilizes **Node.js 20+ LTS**. Key tools include **npm** (package management), **Vite** (for build optimization, although EJS templating is used, Vite can still manage static assets and development server), **Express.js** (web framework), and **EJS** (templating engine). 
-    *   **Linting & Formatting:** Employing **Biome** for ultra-fast linting and code formatting across the JavaScript/TypeScript and potentially HTML/CSS code.
-    *   **Testing:** **Vitest** for unit and integration testing, and **Playwright** for end-to-end testing.
-    *   **Architecture:** Adheres to a **Feature-Sliced Design (FSD)** where applicable for frontend/backend separation, or a **Modular Monolith** for the backend services. Clear separation of concerns is paramount.
+*   **PRIMARY SCENARIO: WEB / BACKEND (Node.js/Express.js)**
+    *   **Stack:** This project leverages **Node.js** (LTS version, e.g., 20.x or newer), **Express.js** (latest stable) for the backend, and **EJS** for efficient server-side templating. **Docker** and **Docker Compose** are integral for containerization, local development environment consistency, and streamlined deployment.
+    *   **Linting & Formatting:** **ESLint** (configured with a professional standard like AirBnB or Google style guides) and **Prettier** are rigorously enforced to maintain impeccable code quality, readability, and consistency across the codebase.
+    *   **Testing:** Employs **Mocha** as the test runner, **Chai** for its versatile assertion library, and **Supertest** for comprehensive HTTP integration testing of Express routes and API endpoints, ensuring robust application behavior.
+    *   **Architecture:** Adheres to a **Modular Monolith** pattern or a highly structured **MVC (Model-View-Controller)** approach. This ensures clear separation of concerns for routes, controllers, services, models, and views, promoting maintainability, scalability, and testability. Strict adherence to **SOLID, DRY, and YAGNI** principles is mandated.
+    *   **Containerization & Deployment:** Features full Docker support, including production-ready `Dockerfile` and `docker-compose.yml` configurations for seamless deployment to container orchestration platforms. CI/CD workflows via GitHub Actions are configured for automated testing and build processes.
+    *   **Security:** Incorporates industry-standard security practices, including the use of `helmet.js` for setting secure HTTP headers, robust input validation, secure cookie handling, cross-site scripting (XSS) prevention, and rate-limiting middleware.
 
-*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not applicable.***
-
-*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable.***
-
----
-
-## 4. CORE PRINCIPLES & VERIFICATION COMMANDS
-
-*   **Design Principles:**
-    *   **SOLID:** Maintainable and extensible code.
-    *   **DRY:** Don't Repeat Yourself.
-    *   **YAGNI:** You Ain't Gonna Need It (build only what is necessary).
-    *   **KISS:** Keep It Simple, Stupid.
-*   **Build & Dev Commands:**
-    *   `git clone https://github.com/chirag127/Express-Kickstart-NodeJS-Web-App-Template.git`
-    *   `cd Express-Kickstart-NodeJS-Web-App-Template`
-    *   `npm install`
-    *   `npm run dev` (or `npm run start` for production)
-*   **Testing Commands:**
-    *   `npm run test:unit` (for Vitest unit tests)
-    *   `npm run test:e2e` (for Playwright end-to-end tests)
-*   **Linting & Formatting:**
-    *   `npm run lint` (or `npx @biomejs/biome lint .`)
-    *   `npm run format` (or `npx @biomejs/biome format . --write`)
-*   **Containerization:**
-    *   `docker build -t express-kickstart .`
-    *   `docker run -p 3000:3000 express-kickstart`
-*   **Security Audits:**
-    *   Regularly audit dependencies using `npm audit`.
-    *   Scan for known vulnerabilities using `npx npm-deps-security-checker` or similar tools.
-
----
-
-## 5. OPERATIONAL METADATA
-*   **Repository Name:** `Express-Kickstart-NodeJS-Web-App-Template`
-*   **Owner:** `chirag127`
-*   **Repository URL:** `https://github.com/chirag127/Express-Kickstart-NodeJS-Web-App-Template`
-*   **License:** `CC BY-NC 4.0`
+*   **REFERENCE SCENARIO A: WEB / APP / EXTENSION (TypeScript) - *Not directly applicable to this project's primary JavaScript/EJS stack, but serves as an architectural reference.***
+    *   **Stack:** TypeScript 6.x (Strict), Vite 7 (Rolldown), Tauri v2.x (Native), WXT (Extensions).
+    *   **State:** Signals (Standardized).
